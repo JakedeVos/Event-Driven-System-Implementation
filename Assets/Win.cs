@@ -19,6 +19,7 @@ public class Win : MonoBehaviour
 
     void OnTriggerEnter()
     {
+        //sends player to win screen
         SceneManager.LoadScene("Scene1");
     }
 }

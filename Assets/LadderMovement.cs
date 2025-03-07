@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LadderMovement : MonoBehaviour
 {
+    //variables for ladder script
     private float vertical;
     private float speed = 8f;
     private bool isLadder;
@@ -13,6 +14,7 @@ public class LadderMovement : MonoBehaviour
 
     void Update()
     {
+        //checks vertical axis
         vertical = Input.GetAxisRaw("Vertical");
 
         if (isLadder && Mathf.Abs(vertical) > 0f)
@@ -23,6 +25,7 @@ public class LadderMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //checks if player is climbing ladder
         if (isClimbing)
         {          
             rb.velocity = new Vector2(rb.velocity.x, vertical * speed);
@@ -39,6 +42,7 @@ public class LadderMovement : MonoBehaviour
 
     private void OnTriggerExit(Collider collision)
     {
+        //checks if player is on ladder
         if (collision.CompareTag("Ladder"))
         {
             isLadder = false;

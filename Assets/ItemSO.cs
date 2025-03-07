@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ItemSO : ScriptableObject
 { 
+    //All the properties of the items in the scriptable objects folder
     public string itemName;
     public string itemDescription;
     public Sprite icon;

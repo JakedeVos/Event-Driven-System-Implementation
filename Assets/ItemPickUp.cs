@@ -10,6 +10,7 @@ public class ItemPickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Player collides with item and it gets destroyed
         if (other.tag == "Player")
         {
             Inventory inventory = other.GetComponent<Inventory>();

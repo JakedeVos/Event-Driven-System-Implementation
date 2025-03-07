@@ -13,6 +13,7 @@ public class InventoryUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //dont destroy the game object when the game first loads
         DontDestroyOnLoad(this.gameObject);
         inventory = FindFirstObjectByType<Inventory>();
         inventory.onInventoryUpdated += UpdateUI;

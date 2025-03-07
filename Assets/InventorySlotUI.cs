@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class InventorySlotUI : MonoBehaviour
 {
+    //On screen UI information
     public Image icon;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;

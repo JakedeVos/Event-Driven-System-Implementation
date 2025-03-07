@@ -20,7 +20,7 @@ public class InventoryData
 
     public Dictionary<ItemSO, int> ToDictionary()
     {
-
+        //load the item quantity
         Dictionary<ItemSO, int> inventory = new Dictionary<ItemSO, int>();
 
         foreach (ItemSO item in Resources.LoadAll<ItemSO>("ScriptableObjects"))

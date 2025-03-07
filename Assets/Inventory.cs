@@ -23,6 +23,7 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(ItemSO newItem, int amount)
     {
+        //add item to your inventory
         if (items.ContainsKey(newItem))
         {
             items[newItem] += amount;
@@ -61,6 +62,7 @@ public class Inventory : MonoBehaviour
 
     public void SaveInventory()
     {
+        //save the inventory
         InventoryData data = new InventoryData(items);
         string json = JsonUtility.ToJson(data, true);
         File.WriteAllText(savePath, json);
@@ -69,6 +71,7 @@ public class Inventory : MonoBehaviour
 
     public void LoadInventory()
     {
+        //load inventory
         if (File.Exists(savePath))
         {
             Debug.Log("found file at" + savePath);
